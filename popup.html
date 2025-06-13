@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <h3>Window Colour Picker</h3>
+        <p class="instructions">Select a window, then choose a colour</p>
+        
+        <div class="window-list" id="windowList">
+            <!-- Window items will be dynamically added here -->
+        </div>
+        
+        <div class="preset-colours">
+            <h4>Preset Colours</h4>
+            <div class="colour-grid" id="presetColours">
+                <button class="colour-button" data-colour="#ec5f67" style="background-color: #ec5f67"></button>
+                <button class="colour-button" data-colour="#f99157" style="background-color: #f99157"></button>
+                <button class="colour-button" data-colour="#fac863" style="background-color: #fac863"></button>
+                <button class="colour-button" data-colour="#99c794" style="background-color: #99c794"></button>
+                <button class="colour-button" data-colour="#5fb3b3" style="background-color: #5fb3b3"></button>
+                <button class="colour-button" data-colour="#6699cc" style="background-color: #6699cc"></button>
+                <button class="colour-button" data-colour="#c594c5" style="background-color: #c594c5"></button>
+            </div>
+        </div>
+        
+        <div class="custom-colour">
+            <h4>Custom Colour</h4>
+            <div class="hex-input-group">
+                <input type="text" id="hexInput" placeholder="#6699cc" value="#6699cc" maxlength="7" pattern="^#[0-9A-Fa-f]{6}$">
+                <div class="colour-preview" id="colourPreview"></div>
+                <button id="applyHexColour" class="apply-button">Apply</button>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <button id="removeColour" class="remove-button">Remove Colour</button>
+            <button id="resetAllColours" class="reset-button">Reset All Windows</button>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

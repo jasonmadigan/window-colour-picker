@@ -1,0 +1,234 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 14px;
+    background: #f5f5f5;
+}
+
+.popup-container {
+    width: 350px;
+    padding: 16px;
+    background: white;
+}
+
+h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.instructions {
+    margin: 0 0 16px 0;
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+    transition: colour 0.3s;
+}
+
+h4 {
+    margin: 16px 0 8px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+}
+
+.window-list {
+    min-height: 50px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background: #fafafa;
+}
+
+.window-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #f0f0f0;
+    background: white;
+}
+
+.window-item:last-child {
+    border-bottom: none;
+}
+
+.window-item:hover {
+    background-color: #f8f8f8;
+}
+
+.window-item.selected {
+    background-color: #e3f2fd;
+}
+
+.window-item.current-window {
+    border-left: 3px solid #4285f4;
+    padding-left: 9px;
+}
+
+.window-item.current-window .tab-count {
+    font-weight: 600;
+}
+
+.window-info {
+    flex: 1;
+    overflow: hidden;
+}
+
+.window-title {
+    display: block;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 2px;
+    color: #333;
+}
+
+.tab-count {
+    display: block;
+    font-size: 12px;
+    color: #888;
+}
+
+.current-colour {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-left: 8px;
+    flex-shrink: 0;
+}
+
+.current-colour.default {
+    width: auto;
+    height: auto;
+    padding: 4px 8px;
+    font-size: 11px;
+    color: #666;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+}
+
+.preset-colours {
+    margin-bottom: 16px;
+}
+
+.colour-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.colour-button {
+    width: 40px;
+    height: 40px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.colour-button:hover {
+    transform: scale(1.1);
+    border-color: #333;
+}
+
+.custom-colour {
+    margin-bottom: 16px;
+}
+
+.hex-input-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+#hexInput {
+    flex: 1;
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: monospace;
+    text-transform: uppercase;
+    transition: border-colour 0.2s;
+}
+
+#hexInput:focus {
+    outline: none;
+    border-color: #4285f4;
+}
+
+#hexInput:invalid {
+    border-color: #f44336;
+}
+
+.colour-preview {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.2s;
+    background-color: #f0f0f0;
+}
+
+.apply-button {
+    padding: 8px 16px;
+    background: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.apply-button:hover {
+    background: #3367d6;
+}
+
+.actions {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.remove-button {
+    width: 100%;
+    padding: 8px 16px;
+    margin-bottom: 8px;
+    background: #757575;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.remove-button:hover {
+    background: #616161;
+}
+
+.reset-button {
+    width: 100%;
+    padding: 8px 16px;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.reset-button:hover {
+    background: #d32f2f;
+}
